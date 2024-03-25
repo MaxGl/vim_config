@@ -1,0 +1,50 @@
+[user]
+	email=maksym.glubokiy@plvision.eu
+	name=Maksym Glubokiy
+
+[core]
+	editor = vim
+	cleanautocrlf = input
+	whitespace = trailing-space,space-before-tab
+	abbrev = 12
+
+[pretty]
+        fixes = Fixes: %h (\"%s\")
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	df = diff
+	dc = diff --cached
+	logl = log --oneline
+	logp = log --patch
+	logs = log --stat
+	ppr = pull --prune --rebase
+	pprs = pull --prune --rebase --autostash
+	fppt = fetch --prune --prune-tags
+	fixes = log --pretty=fixes -1
+	list-untracked = ls-files --others --exclude-standard
+	riss = rebase --interactive --autostash --autosquash
+	# current branch
+	cb = rev-parse --abbrev-ref HEAD
+
+	shows  = show --submodule
+
+	# --check
+	dcc = diff --cached --check
+	dfc = diff --check
+	showc = show --check
+
+	# --name-status
+	dfn = diff --name-status
+	logn = log --name-status
+	shown = show --name-status
+
+	gr =log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+[color]
+	ui = auto
+
+[format]
+	signoff = true
+[diff]
+	tool = meld
